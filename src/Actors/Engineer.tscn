@@ -13,6 +13,9 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+move_right = "eng_right"
+move_left = "eng_left"
+jump = "eng_jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2( 0.4, 0.4 )

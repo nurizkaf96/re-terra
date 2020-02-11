@@ -1,6 +1,9 @@
 extends Actor
 class_name Player
 
+export var move_right := ""
+export var move_left := ""
+export var jump := ""
 
 func _physics_process(delta: float) -> void:
 	var is_jump_interrupted :=  Input.is_action_just_released("jump") and _velocity.y < 0.0
@@ -11,9 +14,7 @@ func _physics_process(delta: float) -> void:
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
 
 func get_direction() -> Vector2:
-	var move_right := ""
-	var move_left := ""
-	var jump := ""
+
 	
 	return Vector2(
 		Input.get_action_strength(move_right) - Input.get_action_strength(move_left),
