@@ -18,9 +18,8 @@ move_left = "eco_left"
 jump = "eco_jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2( 0.4, 0.4 )
+scale = Vector2( 0.8, 0.8 )
 shape = SubResource( 1 )
 
 [node name="char_Ecologist" type="Sprite" parent="."]
-scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )

@@ -26,13 +26,13 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Empty State Godot"
+config/name="Re Terra"
 config/icon="res://icon.png"
 
 [display]
 
-window/size/width=640
-window/size/height=360
+window/size/width=1280
+window/size/height=720
 window/size/fullscreen=true
 window/size/test_width=1280
 window/size/test_height=720
@@ -84,4 +84,5 @@ eng_right={
 
 [rendering]
 
+environment/default_clear_color=Color( 0.47451, 0.482353, 0.545098, 1 )
 environment/default_environment="res://default_env.tres"
