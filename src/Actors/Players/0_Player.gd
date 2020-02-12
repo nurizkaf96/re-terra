@@ -1,4 +1,4 @@
-extends Actor
+extends 'res://src/Actors/0_Actor.gd'
 class_name Player
 
 export var move_right := ""
