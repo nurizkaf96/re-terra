@@ -12,6 +12,10 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+speed = Vector2( 200, 500 )
+move_right = "exp_right"
+move_left = "exp_left"
+jump = "exp_jump"
 
 [node name="char_Explorer" type="Sprite" parent="."]
 position = Vector2( 0, -32 )
