@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/char_Engineer.png-952689c6648199e57672c06fab2708d7.stex"
+path="res://.import/char_engineer.png-a3cea4a6ff6e492e9cff4031ef9d402d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/char_Engineer.png"
-dest_files=[ "res://.import/char_Engineer.png-952689c6648199e57672c06fab2708d7.stex" ]
+source_file="res://assets/Characters/char_engineer.png"
+dest_files=[ "res://.import/char_engineer.png-a3cea4a6ff6e492e9cff4031ef9d402d.stex" ]
 
 [params]
 
@@ -31,4 +31,4 @@ process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=false
-svg/scale=1.0
+svg/scale=0.5

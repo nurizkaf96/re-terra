@@ -1,23 +1,27 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://src/Actors/Engineer.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Players/Engineer.gd" type="Script" id=1]
 [ext_resource path="res://assets/Characters/char_Engineer.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 30, 35 )
+extents = Vector2( 64, 64 )
 
 [node name="Engineer" type="KinematicBody2D"]
-position = Vector2( 0, -32 )
 collision_mask = 64
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 move_right = "eng_right"
 move_left = "eng_left"
 jump = "eng_jump"
 
 [node name="char_Engineer" type="Sprite" parent="."]
+position = Vector2( 0, -32 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -4 )
-scale = Vector2( 0.8, 0.8 )
+position = Vector2( 0, -32 )
+scale = Vector2( 0.4, 0.4 )
 shape = SubResource( 1 )

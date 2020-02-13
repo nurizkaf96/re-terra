@@ -1,24 +1,27 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://src/Actors/Dispatcher.gd" type="Script" id=1]
-[ext_resource path="res://assets/Characters/char_Dispacther.png" type="Texture" id=2]
+[ext_resource path="res://src/Actors/Players/Dispatcher.gd" type="Script" id=1]
+[ext_resource path="res://assets/Characters/char_dispatcher.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 30, 35 )
+extents = Vector2( 64, 64 )
 
 [node name="Dispatcher" type="KinematicBody2D"]
-position = Vector2( 0, -32 )
 collision_mask = 64
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="char_Dispacther" type="Sprite" parent="."]
+[node name="char_Dispatcher" type="Sprite" parent="."]
+position = Vector2( 0, -32 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -4 )
-scale = Vector2( 0.8, 0.8 )
+position = Vector2( 0, -32 )
+scale = Vector2( 0.4, 0.4 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0, -288 )
-current = true
