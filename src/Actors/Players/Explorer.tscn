@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/Characters/char_Explorer.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 64, 64 )
+extents = Vector2( 50, 50 )
 
 [node name="Explorer" type="KinematicBody2D"]
 collision_mask = 64
@@ -12,17 +12,21 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-speed = Vector2( 200, 500 )
+speed = Vector2( 200, 250 )
 move_right = "exp_right"
 move_left = "exp_left"
 jump = "exp_jump"
 
 [node name="char_Explorer" type="Sprite" parent="."]
-position = Vector2( 0, -32 )
+position = Vector2( 0, -25 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -32 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 0, -25 )
+scale = Vector2( 0.35, 0.35 )
 shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.5, 0.5 )

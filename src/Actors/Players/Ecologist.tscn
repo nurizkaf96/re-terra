@@ -4,28 +4,28 @@
 [ext_resource path="res://assets/Characters/char_Ecologist.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 64, 64 )
+extents = Vector2( 50, 50 )
 
 [node name="Ecologist" type="KinematicBody2D"]
-position = Vector2( 0, -32 )
 collision_mask = 64
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 move_right = "eco_right"
 move_left = "eco_left"
 jump = "eco_jump"
 
 [node name="char_Ecologist" type="Sprite" parent="."]
+position = Vector2( 0, -26 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2( 0.3, 0.3 )
+position = Vector2( 0, -26 )
+scale = Vector2( 0.35, 0.35 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 0, -32 )
+position = Vector2( 0, 3.8147e-06 )
 scale = Vector2( 0.8, 0.8 )
-current = true
+zoom = Vector2( 0.5, 0.5 )
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
