@@ -1,7 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://src/Actors/Players/Ecologist.gd" type="Script" id=1]
-[ext_resource path="res://assets/Characters/char_Ecologist.png" type="Texture" id=2]
+[ext_resource path="res://02_Stage/B_Players/src/Ecologist.gd" type="Script" id=1]
+[ext_resource path="res://02_Stage/B_Players/res/char_ecologist.png" type="Texture" id=2]
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 50, 50 )
