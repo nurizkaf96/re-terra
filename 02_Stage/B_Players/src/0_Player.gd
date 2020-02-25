@@ -1,42 +1,34 @@
-extends 'res://src/Actors/0_Actor.gd'
+extends KinematicBody2D
 class_name Player
 
-export var move_right := ""
-export var move_left := ""
-export var jump := ""
+signal energy_changed(newvalue)
+
+export var move_speed := 250.0
+export var push_speed := 150.0
+
+export var energy := 100 setget _set_energy
+
+export var id = ""
+
+var velocity = Vector2()
+
+func get_input():
+	velocity = Vector2()
+	if Input.is_action_pressed('%s_right' % id) :
+		velocity.x += 1
+	if Input.is_action_pressed('%s_left' % id) :
+		velocity.x -= 1
+	if Input.is_action_pressed('%s_up' % id) :
+		velocity.y -= 1
+	if Input.is_action_pressed('%s_down' % id) :
+		velocity.y += 1
+	velocity = velocity.normalized() * move_speed
 
 func _physics_process(delta: float) -> void:
-	var is_jump_interrupted :=  Input.is_action_just_released(jump) and _velocity.y < 0.0
-	 
-	var direction := get_direction()
+	get_input()
 	
-	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
-	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
+	velocity = move_and_slide(velocity)
 
-func get_direction() -> Vector2:
-
-	
-	return Vector2(
-		Input.get_action_strength(move_right) - Input.get_action_strength(move_left),
-		-1.0 if Input.is_action_just_pressed(jump) and is_on_floor() else 1.0
-	)
-	
-func calculate_move_velocity(
-		linear_velocity: Vector2,
-		direction: Vector2,
-		speed: Vector2,
-		is_jump_interrupted : bool
-	) -> Vector2:
-	
-	var out := linear_velocity
-	
-	out.x = speed.x * direction.x
-	out.y += gravity * get_physics_process_delta_time()
-	
-	if direction.y == -1.0:
-		out.y = speed.y * direction.y
-	
-	if is_jump_interrupted: 
-		out.y = 0.0
-	
-	return out
+func _set_energy (new_value : int) -> void :
+	energy = max(0, new_value)
+	emit_signal("energy_changed", energy)

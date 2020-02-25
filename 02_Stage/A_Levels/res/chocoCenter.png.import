@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Simple Tileset.png-69c2de7f651bbf825f9711c7d8cd7194.stex"
+path="res://.import/chocoCenter.png-915b0578ad5aa9e38494b9c2ac0fa24c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://02_Stage/A_Levels/res/Simple Tileset.png"
-dest_files=[ "res://.import/Simple Tileset.png-69c2de7f651bbf825f9711c7d8cd7194.stex" ]
+source_file="res://02_Stage/A_Levels/res/chocoCenter.png"
+dest_files=[ "res://.import/chocoCenter.png-915b0578ad5aa9e38494b9c2ac0fa24c.stex" ]
 
 [params]
 

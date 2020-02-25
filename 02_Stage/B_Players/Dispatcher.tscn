@@ -3,29 +3,23 @@
 [ext_resource path="res://02_Stage/B_Players/src/Dispatcher.gd" type="Script" id=1]
 [ext_resource path="res://02_Stage/B_Players/res/char_dispatcher.png" type="Texture" id=2]
 
-
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 50, 50 )
 
 [node name="Dispatcher" type="KinematicBody2D"]
-collision_mask = 64
+collision_mask = 80
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
-move_right = "dis_right"
-move_left = "dis_left"
-jump = "dis_jump"
+id = "dis"
 
 [node name="char_Dispatcher" type="Sprite" parent="."]
-position = Vector2( 0, -25 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -25 )
-scale = Vector2( 0.35, 0.35 )
+scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]

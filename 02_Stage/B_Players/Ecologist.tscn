@@ -3,26 +3,20 @@
 [ext_resource path="res://02_Stage/B_Players/src/Ecologist.gd" type="Script" id=1]
 [ext_resource path="res://02_Stage/B_Players/res/char_ecologist.png" type="Texture" id=2]
 
-
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 50, 50 )
 
 [node name="Ecologist" type="KinematicBody2D"]
-collision_mask = 64
+collision_mask = 80
 script = ExtResource( 1 )
-move_right = "eco_right"
-move_left = "eco_left"
-jump = "eco_jump"
+id = "eco"
 
 [node name="char_Ecologist" type="Sprite" parent="."]
-position = Vector2( 0, -26 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -26 )
-scale = Vector2( 0.35, 0.35 )
+scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
