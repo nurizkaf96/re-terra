@@ -1,0 +1,12 @@
+[gd_scene format=2]
+
+[node name="Node" type="Node"]
+
+[node name="Tile_Base" type="TileMap" parent="."]
+cell_size = Vector2( 16, 16 )
+format = 1
+
+[node name="Obstacle" type="TileMap" parent="Tile_Base"]
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
