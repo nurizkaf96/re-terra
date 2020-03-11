@@ -27,6 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Re: Terra"
+run/main_scene="res://Menus/Title Screen.tscn"
 config/icon="res://icon.png"
 
 [display]

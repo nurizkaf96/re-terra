@@ -5,16 +5,16 @@
 
 [node name="char_Dispatcher" type="Node2D"]
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
 id_char = "dis"
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 8, 8 )
 enabled = true
 cast_to = Vector2( 0, 8 )
 
 [node name="Pivot" type="Position2D" parent="."]
+position = Vector2( 8, 8 )
 
 [node name="Sprite" type="Sprite" parent="Pivot"]
+position = Vector2( 0.773018, 0.428974 )
 texture = ExtResource( 1 )
