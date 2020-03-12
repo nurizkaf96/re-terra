@@ -3,7 +3,7 @@
 [ext_resource path="res://Characters/assets/char_Dispatcher.png" type="Texture" id=1]
 [ext_resource path="res://Characters/src/char_Dispatcher.gd" type="Script" id=2]
 
-[node name="char_Dispatcher" type="Node2D"]
+[node name="char_movement" type="Node2D"]
 script = ExtResource( 2 )
 id_char = "dis"
 
